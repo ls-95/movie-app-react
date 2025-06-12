@@ -1,12 +1,10 @@
 import "./App.css";
-import MovieCard from "./components/MovieCard";
+import Home from "./pages/Home";
 
 function App() {
-  const movieNumber = 1;
-
   return (
     <>
-      <MovieCard movie={{ title: "Tish's film", release_date: "2024" }} />
+      <Home />
     </>
   );
 }
