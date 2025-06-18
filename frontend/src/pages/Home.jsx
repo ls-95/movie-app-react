@@ -11,7 +11,11 @@ function Home() {
     { id: 4, title: "Scarface", release_date: "1983" },
   ];
 
-  const handleSearch = () => {};
+  const handleSearch = (e) => {
+    e.preventDefault();
+    alert(searchQuery);
+    setSearchQuery("");
+  };
 
   return (
     <div className="home">
@@ -20,6 +24,8 @@ function Home() {
           type="text"
           placeholder="Search for movies..."
           className="search-input"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
         />
         <button type="submit" className="search-button">
           Search
